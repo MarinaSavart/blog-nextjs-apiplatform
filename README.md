@@ -1,4 +1,4 @@
-# Test technique Api Platform 3 et Symfony 6.4
+# Test technique Api Platform 3 with Symfony 6.4 and NextJs
 
 ## Table of Contents
 
