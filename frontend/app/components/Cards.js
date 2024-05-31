@@ -4,8 +4,6 @@ import { Card, CardBody, CardText, CardTitle, Col } from 'react-bootstrap';
 
 
 export default function Cards({ data, username }) {
-
-  // console.log(data.category.name);
   return (
     <Col xs={12} s={12} md={6} xl={4}>
       <Link href={`/posts/${data.id}`}>

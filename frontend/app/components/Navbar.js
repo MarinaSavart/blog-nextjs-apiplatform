@@ -1,18 +1,26 @@
 
 import AuthContext from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
-import apiClient from '@/utils/axiosConfig';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useContext, useState } from 'react';
-import { Button, Form, FormControl, FormGroup, FormLabel, Modal, ModalBody, ModalFooter, ModalHeader, ModalTitle, Nav, NavItem, NavLink } from 'react-bootstrap';
+import { useContext, useEffect } from 'react';
+import { Nav, NavItem, NavLink } from 'react-bootstrap';
 
 
 
 export default function Navbar() {
+  const router = useRouter(); 
   const { logout } = useContext(AuthContext);
 
+  useEffect(() => {
+    const storedToken = localStorage.getItem('token');
+    if (!storedToken) {
+       
+      return router.push('/login');
+    }
+
+  }, []);
+
   return (
-    <>
       <Nav>
         <NavItem>
           <NavLink href={`/`}>Home</NavLink>
@@ -30,6 +38,5 @@ export default function Navbar() {
           <NavLink href={`/categories`}>Categories</NavLink>
         </NavItem>
       </Nav>
-    </>
   );
 }

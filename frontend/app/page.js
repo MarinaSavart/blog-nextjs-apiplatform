@@ -6,7 +6,6 @@ import AuthContext from '../context/AuthContext';
 import apiClient from '../utils/axiosConfig';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row } from 'react-bootstrap';
-import Posts from './posts/page';
 import Header from './components/Header';
 import Cards from './components/Cards';
 
@@ -17,7 +16,7 @@ async function fetchData(token) {
         Authorization: `Bearer ${token}`
       }
     });
-    return response.data['hydra:member']; // Extraire uniquement les éléments pertinents
+    return response.data['hydra:member'];
   } catch (error) {
     console.error('Error fetching data:', error);
     return [];

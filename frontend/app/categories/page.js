@@ -1,8 +1,7 @@
 "use client";
 
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-// import AuthContext from '../context/AuthContext';
 import { Button, Container, Form, FormControl, FormLabel, InputGroup, Row } from "react-bootstrap";
 import Header from "../components/Header";
 import apiClient from '@/utils/axiosConfig';
@@ -17,7 +16,7 @@ export default function Categories() {
         e.preventDefault();
         try {
           await apiClient.post('/categories', { name });
-          router.push('/'); // Rediriger vers la liste des catégories après création réussie
+          router.push('/');
           setTimeout(() => router.push('/categories'), 100);
         } catch (error) {
           console.error('Error creating category:', error);
@@ -66,7 +65,7 @@ export default function Categories() {
             </Form>
             <Row>
                 {data.length === 0 && (
-                    <li className="text-slate-50 text-md">Pas d'items ...</li>
+                    <li className="text-slate-50 text-md">No Items ...</li>
                 )}
                 {data.length > 0 &&
                     data.map(item => (

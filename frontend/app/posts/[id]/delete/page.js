@@ -6,7 +6,6 @@ import apiClient from '@/utils/axiosConfig';
 
 function DeletePostPage({ params }) {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const id = params.id;
 
   useEffect(() => {

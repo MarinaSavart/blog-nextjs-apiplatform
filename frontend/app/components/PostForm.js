@@ -1,20 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Col, Container, Form, FormControl, FormGroup, FormLabel, FormSelect, FormText, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, FormControl, FormGroup, FormLabel, FormSelect } from 'react-bootstrap';
 
 function PostForm({ categories, initialData = {}, onSubmit }) {
 
   const [title, setTitle] = useState(initialData.title || '');
   const [content, setContent] = useState(initialData.content || '');
   const [selectedCategory, setSelectedCategory] = useState(initialData.category || '');
-
-  useEffect(() => {
-    setTitle(initialData.title || '');
-    setContent(initialData.content || '');
-    setSelectedCategory(initialData.category || '');
-  }, [initialData]);
 
   function handleSubmit(e) {
     e.preventDefault();

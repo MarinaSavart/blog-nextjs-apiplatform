@@ -1,8 +1,7 @@
-// utils/axiosConfig.js
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8000/api', // Changez cette URL selon l'adresse de votre API
+  baseURL: 'http://localhost:8000/api',
   headers: {
     'Content-Type': 'application/json',
   },

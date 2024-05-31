@@ -1,4 +1,4 @@
-import { Alert, Button, Col } from "react-bootstrap";
+import { Button, Col } from "react-bootstrap";
 
 export default function ListItems({itemData, handleDelete}) {
     return (

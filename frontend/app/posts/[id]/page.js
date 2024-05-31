@@ -2,7 +2,6 @@
 
 import Header from '@/app/components/Header';
 import apiClient from '@/utils/axiosConfig';
-import { useRouter } from 'next/navigation'; // Importation pour la redirection après connexion
 import { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 

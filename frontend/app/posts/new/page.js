@@ -2,9 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import apiClient from '@/utils/axiosConfig'; // Importez votre client API Axios
+import apiClient from '@/utils/axiosConfig';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Col, Container, Form, FormControl, FormGroup, FormLabel, FormSelect, FormText, Row } from 'react-bootstrap';
 import PostForm from '@/app/components/PostForm';
 import Header from '@/app/components/Header';
 

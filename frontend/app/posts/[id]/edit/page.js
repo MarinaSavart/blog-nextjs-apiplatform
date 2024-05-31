@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import apiClient from '@/utils/axiosConfig'; // Assurez-vous que le chemin est correct
+import apiClient from '@/utils/axiosConfig';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '@/app/components/Header';
 import PostForm from '@/app/components/PostForm';
