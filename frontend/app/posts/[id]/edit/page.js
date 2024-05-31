@@ -49,6 +49,7 @@ function EditPostPage({ params }) {
     <div className="mt-4">
       <Header name={'Update your Post'} />
       <PostForm
+        name="Edit"
         categories={categories}
         initialData={postData}
         onSubmit={handleUpdate}

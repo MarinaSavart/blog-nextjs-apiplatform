@@ -13,10 +13,12 @@ import {
   FormSelect,
 } from 'react-bootstrap';
 
-function PostForm({ categories, initialData = {}, onSubmit }) {
+function PostForm({ name, categories, initialData = {}, onSubmit }) {
+  const categoryId = (name === "Add") ? initialData.category : initialData.category['@id'] 
+
   const [title, setTitle] = useState(initialData.title || '');
   const [content, setContent] = useState(initialData.content || '');
-  const [selectedCategory, setSelectedCategory] = useState(initialData.category['@id'] || '');
+  const [selectedCategory, setSelectedCategory] = useState(categoryId || '');
 
   function handleSubmit(e) {
     e.preventDefault();

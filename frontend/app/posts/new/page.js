@@ -35,7 +35,7 @@ function NewPostPage() {
   return (
     <div className="mt-4">
       <Header name={'Add Post'} />
-      <PostForm categories={categories} onSubmit={handleCreate} />
+      <PostForm name="Add" categories={categories} onSubmit={handleCreate} />
     </div>
   );
 }
