@@ -59,7 +59,7 @@ export default function Categories() {
 
   return (
     <Container>
-      <Header name={'Category'} />
+      <Header name={'Categories'} />
       <Form
         onSubmit={handleCreateCategory}
         className="mt-5 row justify-content-center"
@@ -74,7 +74,7 @@ export default function Categories() {
             onChange={(e) => setName(e.target.value)}
           />
           <Button type="submit" className="input-group-prepend ">
-            Ajouter
+            Add
           </Button>
         </InputGroup>
       </Form>

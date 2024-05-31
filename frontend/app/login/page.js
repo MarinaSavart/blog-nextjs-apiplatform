@@ -27,8 +27,7 @@ export default function Login() {
       const response = await apiClient.post('/login', { username, password });
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('username', username);
-      router.push('/');
-      setTimeout(() => router.push('/'), 100);
+      router.push('/categories');
     } catch (error) {
       console.error('Login failed:', error);
     }
