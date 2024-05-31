@@ -17,7 +17,7 @@ Clone the repository.
 
 ```
 git clone https://github.com/MarinaSavart/test-technique.git
-cd test-technique
+cd test-technique-nextjs-apiplatform
 ```
 
 
