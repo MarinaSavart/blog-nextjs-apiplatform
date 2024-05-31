@@ -4,7 +4,8 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Installing](#installing)
+- [Installing Back](#installing-backend)
+- [Installing Front](#installing-frontend)
 
 ## About <a name = "about"></a>
 
@@ -20,7 +21,11 @@ cd test-technique
 ```
 
 
-### Installing <a name = "installing"></a>
+## Installing Backend<a name = "installing-backend"></a>
+
+```
+cd backend
+```
 
 Install composer
 ```
@@ -45,4 +50,19 @@ Finally I added Fixtures to make testing easier for you, there are 5 categories 
 php bin/console doctrine:fixtures:load
 ```
 
+
+## Installing Front<a name = "installing-frontend"></a>
+
+```
+cd frontend
+```
+Install node_module
+
+```
+npm install
+```
+And start your server
+```
+npm run dev
+```
 ### Enjoy It ! 🚀 
