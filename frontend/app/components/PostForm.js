@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Button,
@@ -16,9 +16,7 @@ import {
 function PostForm({ categories, initialData = {}, onSubmit }) {
   const [title, setTitle] = useState(initialData.title || '');
   const [content, setContent] = useState(initialData.content || '');
-  const [selectedCategory, setSelectedCategory] = useState(
-    initialData.category || '',
-  );
+  const [selectedCategory, setSelectedCategory] = useState(initialData.category['@id'] || '');
 
   function handleSubmit(e) {
     e.preventDefault();
