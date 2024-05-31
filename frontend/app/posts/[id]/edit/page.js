@@ -44,17 +44,17 @@ function EditPostPage({ params }) {
   if (!postData) {
     return <div>Loading...</div>;
   }
-  
+
   return (
-    <div className='mt-4'>
-      <Header name={"Update your Post"} />
-      <PostForm         
+    <div className="mt-4">
+      <Header name={'Update your Post'} />
+      <PostForm
         categories={categories}
         initialData={postData}
-        onSubmit={handleUpdate}/>
+        onSubmit={handleUpdate}
+      />
     </div>
   );
 }
 
 export default EditPostPage;
-

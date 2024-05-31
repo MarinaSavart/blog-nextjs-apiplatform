@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { createContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     setToken(null);
-    router.push('/'); 
+    router.push('/');
   };
 
   return (

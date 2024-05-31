@@ -5,7 +5,6 @@ import apiClient from '@/utils/axiosConfig';
 import { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 
-
 function PostPage({ params }) {
   const id = params.id;
   const [postData, setPostData] = useState(null);
@@ -24,19 +23,17 @@ function PostPage({ params }) {
       fetchPost();
     }
   }, [id]);
-  
 
   if (!postData) {
     return <div>Loading...</div>;
   }
 
-
   console.log(postData.category.name);
-  
+
   return (
     <Container>
       <Header name={postData.title} />
-      <h4 className='text-center'>Category: {postData.category.name}</h4>
+      <h4 className="text-center">Category: {postData.category.name}</h4>
       <p>{postData.content}</p>
     </Container>
   );

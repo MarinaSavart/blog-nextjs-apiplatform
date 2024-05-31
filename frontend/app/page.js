@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 import { useContext, useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation'; 
+import { useRouter } from 'next/navigation';
 import AuthContext from '../context/AuthContext';
 import apiClient from '../utils/axiosConfig';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,8 +13,8 @@ async function fetchData(token) {
   try {
     const response = await apiClient.get('/posts', {
       headers: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
     return response.data['hydra:member'];
   } catch (error) {
@@ -23,17 +23,14 @@ async function fetchData(token) {
   }
 }
 
-
 export default function Home() {
-
-  const router = useRouter(); 
+  const router = useRouter();
   const { token, username } = useContext(AuthContext);
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
     if (!storedToken) {
-       
       return router.push('/login');
     }
 
@@ -44,10 +41,10 @@ export default function Home() {
 
   return (
     <Container fluid>
-      <Header name={"Blog"}/>
+      <Header name={'Blog'} />
       <Row>
         {data.map((item) => (
-          <Cards key={item.id} data={item} username={username}/>
+          <Cards key={item.id} data={item} username={username} />
         ))}
       </Row>
     </Container>
