@@ -16,7 +16,7 @@ Welcome to my awesome technical test 😁
 Clone the repository.
 
 ```
-git clone https://github.com/MarinaSavart/test-technique.git
+git clone https://github.com/MarinaSavart/test-technique-nextjs-apiplatform.git
 cd test-technique-nextjs-apiplatform
 ```
 
